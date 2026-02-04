@@ -1,5 +1,5 @@
 # logback-appender
-this library has 2 feature:
+this library has 2 features:
 1. console appender
 2. kafka appender
 
@@ -20,11 +20,14 @@ this library has 2 feature:
 ```
 
 2. configure logback-spring.xml
-    a. for console
+
+- for console
  ```xml
 ...
 <configuration>
     ...
+    <property name="logPattern" value="%d | %-5level | %logger{35} | %msg%n" />
+    <property name="logEncoding" value="UTF-8" />
      <appender name="APP-CONSOLE" class="com.github.amsatrio.ConsoleAppender">
         <encoder class="PatternLayoutEncoder">
             <charset>${logEncoding}</charset>
@@ -46,7 +49,8 @@ this library has 2 feature:
 </configuration>
 ```
 
-    b. for kafka
+- for kafka
+
 ```xml
 ...
 <configuration>

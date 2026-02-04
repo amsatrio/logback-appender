@@ -70,7 +70,6 @@
               <transformers>
                 <transformer
                   implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                  <mainClass>com.github.amsatrio.App</mainClass>
                 </transformer>
               </transformers>
             </configuration>

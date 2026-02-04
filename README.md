@@ -10,7 +10,17 @@ this library has 2 feature:
 3. mvn clean install
 
 ## example
-for console
+1. add this lib to project
+```xml
+		<dependency>
+			<groupId>com.github.amsatrio</groupId>
+			<artifactId>logback-appender</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+```
+
+2. configure logback-spring.xml
+    a. for console
  ```xml
 ...
 <configuration>
@@ -35,7 +45,8 @@ for console
     ...
 </configuration>
 ```
-for kafka
+
+    b. for kafka
 ```xml
 ...
 <configuration>

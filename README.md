@@ -5,9 +5,9 @@ this library has 2 feature:
 
 # usage
 ## add this library to local maven
-git clone https://github.com/amsatrio/logback-appender.git
-cd logback-appender
-mvn clean install
+1. git clone https://github.com/amsatrio/logback-appender.git
+2. cd logback-appender
+3. mvn clean install
 
 ## example
 for console
@@ -67,7 +67,7 @@ for kafka
         <producerConfig>batch.size=16384</producerConfig>
     </appender>
 
-    <appender name="ASYNC-KAFKA" class="AsyncAppender">
+    <appender name="ASYNC-APP-KAFKA" class="AsyncAppender">
         <appender-ref ref="APP-KAFKA" />
         <queueSize>500</queueSize>
         <maxFlushTime>1000</maxFlushTime>
@@ -75,7 +75,7 @@ for kafka
     </appender>
 
     <root>
-        <appender-ref ref="ASYNC-KAFKA" />
+        <appender-ref ref="ASYNC-APP-KAFKA" />
     </root>
     ...
 </configuration>

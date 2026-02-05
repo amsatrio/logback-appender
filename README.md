@@ -9,7 +9,7 @@ this library has 2 features:
 1. add this lib to project
 ```xml
 		<dependency>
-			<groupId>com.github.amsatrio</groupId>
+			<groupId>io.github.amsatrio</groupId>
 			<artifactId>logback-appender</artifactId>
 			<version>0.0.2</version>
 		</dependency>
@@ -22,6 +22,14 @@ if you need kafka appender, add this dependency:
 			<artifactId>spring-kafka</artifactId>
 		</dependency>
 ```
+or
+```xml
+<dependency>
+    <groupId>org.apache.kafka</groupId>
+    <artifactId>kafka-clients</artifactId>
+    <version>4.1.1</version>
+</dependency>
+```
 
 2. configure logback-spring.xml
 
@@ -32,7 +40,7 @@ if you need kafka appender, add this dependency:
     ...
     <property name="logPattern" value="%d | %-5level | %logger{35} | %msg%n" />
     <property name="logEncoding" value="UTF-8" />
-     <appender name="APP-CONSOLE" class="com.github.amsatrio.ConsoleAppender">
+     <appender name="APP-CONSOLE" class="io.github.amsatrio.ConsoleAppender">
         <encoder class="PatternLayoutEncoder">
             <charset>${logEncoding}</charset>
             <pattern>${logPattern}</pattern>
@@ -61,7 +69,7 @@ if you need kafka appender, add this dependency:
     ...
     <property name="logServiceName" value="spring-boot-container-demo" />
 
-    <appender name="APP-KAFKA" class="com.github.amsatrio.KafkaAppender">
+    <appender name="APP-KAFKA" class="io.github.amsatrio.KafkaAppender">
         <encoder class="LoggingEventCompositeJsonEncoder">
             <providers>
                 <mdc />

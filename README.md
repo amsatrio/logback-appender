@@ -4,10 +4,6 @@ this library has 2 features:
 2. kafka appender
 
 # usage
-## add this library to local maven
-1. git clone https://github.com/amsatrio/logback-appender.git
-2. cd logback-appender
-3. mvn clean install
 
 ## example
 1. add this lib to project
@@ -15,7 +11,15 @@ this library has 2 features:
 		<dependency>
 			<groupId>com.github.amsatrio</groupId>
 			<artifactId>logback-appender</artifactId>
-			<version>0.0.1</version>
+			<version>0.0.2</version>
+		</dependency>
+```
+
+if you need kafka appender, add this dependency:
+```xml
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
 		</dependency>
 ```
 
